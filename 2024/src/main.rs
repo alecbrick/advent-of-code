@@ -1,121 +1,144 @@
-mod utils;
+use advent_of_code::template::commands::{all, download, read, scaffold, solve, time};
+use args::{parse, AppArguments};
 
-use regex::Regex;
-use std::io;
-use utils::{parse_ints, read_lines};
+#[cfg(feature = "today")]
+use advent_of_code::template::Day;
+#[cfg(feature = "today")]
+use std::process;
 
-fn in_bounds(height: i32, width: i32, y: i32, x: i32) -> bool {
-    if y < 0 || x < 0 {
-        return false;
+mod args {
+    use advent_of_code::template::Day;
+    use std::process;
+
+    pub enum AppArguments {
+        Download {
+            day: Day,
+        },
+        Read {
+            day: Day,
+        },
+        Scaffold {
+            day: Day,
+            download: bool,
+            overwrite: bool,
+        },
+        Solve {
+            day: Day,
+            release: bool,
+            dhat: bool,
+            submit: Option<u8>,
+        },
+        All {
+            release: bool,
+        },
+        Time {
+            all: bool,
+            day: Option<Day>,
+            store: bool,
+        },
+        #[cfg(feature = "today")]
+        Today,
     }
-    if y >= height || x >= width {
-        return false;
-    }
-    return true;
-}
 
-fn part_1(lines: &Vec<String>) {
-    let mut total = 0;
-    let search_string = "XMAS";
-    let height: i32 = lines.len().try_into().unwrap();
-    let width: i32 = lines[0].len().try_into().unwrap();
-    for i in 0..lines.len() {
-        for j in 0..lines[0].len() {
-            for dir_y in -1..2 {
-                for dir_x in -1..2 {
-                    let mut curr = 0;
-                    let mut curr_y: i32 = i.try_into().unwrap();
-                    let mut curr_x: i32 = j.try_into().unwrap();
-                    let mut found = false;
-                    while curr < search_string.len() {
-                        if !in_bounds(height, width, curr_y, curr_x) {
-                            break;
-                        }
-                        let usize_y: usize = curr_y.try_into().unwrap();
-                        let usize_x: usize = curr_x.try_into().unwrap();
-                        if lines[usize_y].as_bytes()[usize_x] != search_string.as_bytes()[curr] {
-                            break;
-                        }
-                        curr_y += dir_y;
-                        curr_x += dir_x;
-                        curr += 1;
-                        if curr == 4 {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if found {
-                        total += 1;
-                    }
+    pub fn parse() -> Result<AppArguments, Box<dyn std::error::Error>> {
+        let mut args = pico_args::Arguments::from_env();
+
+        let app_args = match args.subcommand()?.as_deref() {
+            Some("all") => AppArguments::All {
+                release: args.contains("--release"),
+            },
+            Some("time") => {
+                let all = args.contains("--all");
+                let store = args.contains("--store");
+
+                AppArguments::Time {
+                    all,
+                    day: args.opt_free_from_str()?,
+                    store,
                 }
             }
+            Some("download") => AppArguments::Download {
+                day: args.free_from_str()?,
+            },
+            Some("read") => AppArguments::Read {
+                day: args.free_from_str()?,
+            },
+            Some("scaffold") => AppArguments::Scaffold {
+                day: args.free_from_str()?,
+                download: args.contains("--download"),
+                overwrite: args.contains("--overwrite"),
+            },
+            Some("solve") => AppArguments::Solve {
+                day: args.free_from_str()?,
+                release: args.contains("--release"),
+                submit: args.opt_value_from_str("--submit")?,
+                dhat: args.contains("--dhat"),
+            },
+            #[cfg(feature = "today")]
+            Some("today") => AppArguments::Today,
+            Some(x) => {
+                eprintln!("Unknown command: {x}");
+                process::exit(1);
+            }
+            None => {
+                eprintln!("No command specified.");
+                process::exit(1);
+            }
+        };
+
+        let remaining = args.finish();
+        if !remaining.is_empty() {
+            eprintln!("Warning: unknown argument(s): {remaining:?}.");
         }
+
+        Ok(app_args)
     }
-    println!("{}", total)
 }
 
-
-fn part_2(lines: &Vec<String>) {
-    let mut total = 0;
-    let search_string = "MAS";
-    let height: i32 = lines.len().try_into().unwrap();
-    let width: i32 = lines[0].len().try_into().unwrap();
-
-    let mut a_counts = vec![vec![0; lines[0].len()]; lines.len()];
-
-    for i in 0..lines.len() {
-        for j in 0..lines[0].len() {
-            for dir_y in [-1, 1] {
-                for dir_x in [-1, 1] {
-                    let mut curr = 0;
-                    let mut curr_y: i32 = i.try_into().unwrap();
-                    let mut curr_x: i32 = j.try_into().unwrap();
-                    let mut found = false;
-                    let mut a_y: usize = 0;
-                    let mut a_x: usize = 0;
-                    while curr < search_string.len() {
-                        if !in_bounds(height, width, curr_y, curr_x) {
-                            break;
-                        }
-                        let usize_y: usize = curr_y.try_into().unwrap();
-                        let usize_x: usize = curr_x.try_into().unwrap();
-                        if lines[usize_y].as_bytes()[usize_x] != search_string.as_bytes()[curr] {
-                            break;
-                        }
-                        // if this is the a:
-                        if curr == 1 {
-                            a_y = usize_y;
-                            a_x = usize_x;
-                        }
-                        curr_y += dir_y;
-                        curr_x += dir_x;
-                        curr += 1;
-                        if curr == search_string.len() {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if found {
-                        a_counts[a_y][a_x] += 1
-                    }
+fn main() {
+    match parse() {
+        Err(err) => {
+            eprintln!("Error: {err}");
+            std::process::exit(1);
+        }
+        Ok(args) => match args {
+            AppArguments::All { release } => all::handle(release),
+            AppArguments::Time { day, all, store } => time::handle(day, all, store),
+            AppArguments::Download { day } => download::handle(day),
+            AppArguments::Read { day } => read::handle(day),
+            AppArguments::Scaffold {
+                day,
+                download,
+                overwrite,
+            } => {
+                scaffold::handle(day, overwrite);
+                if download {
+                    download::handle(day);
                 }
             }
-        }
-    }
-    let mut total = 0;
-    for i in 0..lines.len() {
-        for j in 0..lines[0].len() {
-            if a_counts[i][j] == 2 {
-                total += 1;
+            AppArguments::Solve {
+                day,
+                release,
+                dhat,
+                submit,
+            } => solve::handle(day, release, dhat, submit),
+            #[cfg(feature = "today")]
+            AppArguments::Today => {
+                match Day::today() {
+                    Some(day) => {
+                        scaffold::handle(day, false);
+                        download::handle(day);
+                        read::handle(day)
+                    }
+                    None => {
+                        eprintln!(
+                            "`today` command can only be run between the 1st and \
+                            the 25th of december. Please use `scaffold` with a specific day."
+                        );
+                        process::exit(1)
+                    }
+                };
             }
-        }
-    }
-    println!("{}", total)
-}
-
-
-fn main() -> io::Result<()> {
-    let lines = read_lines("input.txt")?;
-    part_2(&lines);
-    Ok(())
+        },
+    };
 }
