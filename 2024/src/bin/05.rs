@@ -21,7 +21,7 @@ fn parse_input(input: &str) -> (HashMap<u32, HashSet<u32>>, Vec<Vec<u32>>) {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let (rules, lines)= parse_input(input);
+    let (rules, lines) = parse_input(input);
 
     let mut total: u32 = 0;
     for line in lines {
