@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use num::bigint::BigUint;
 
 advent_of_code::solution!(11);
 
