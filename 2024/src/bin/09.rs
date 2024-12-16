@@ -71,10 +71,10 @@ pub fn part_two(input: &str) -> Option<u64> {
             continue;
         }
         let segment_length = disk[back_pointer].1;
-        let front_pointer = 0;
-        let found = false;
+        let mut front_pointer = 0;
+        let mut found = false;
         while front_pointer < back_pointer {
-            if disk[front_pointer].0 == -1 && disk[front_pointer].1 <= segment_length {
+            if disk[front_pointer].0 == -1 && segment_length <= disk[front_pointer].1 {
                 found = true;
                 break;
             }
@@ -82,28 +82,30 @@ pub fn part_two(input: &str) -> Option<u64> {
         }
         if found {
             // move back pointer into front pointer
-        }
-        let front_pointer = 0;
-        if disk[front_pointer].0 == -1 {
-            while back_pointer > 0 && disk[back_pointer] == -1 {
-                back_pointer -= 1;
-            }
-            if back_pointer < front_pointer {
-                break;
-            }
+            let remaining_space = (-1, (disk[front_pointer].1 - segment_length));
             disk[front_pointer] = disk[back_pointer];
-            disk[back_pointer] = -1;
+            disk[back_pointer].0 = -1;
+            if remaining_space.1 != 0 {
+                disk.insert(front_pointer + 1, remaining_space);
+                back_pointer += 1;
+            }
         }
-        front_pointer += 1;
+        back_pointer -= 1;
     }
-    println!("{:?}", disk);
 
-
+    let disk_chars: Vec<i32> = disk.into_iter().flat_map(|data| {
+        let mut ret: Vec<i32> = Vec::new();
+        for i in 0..data.1 {
+            ret.push(data.0);
+        }
+        ret
+    }).collect();
+    println!("{:?}", disk_chars);
     let mut checksum: u64 = 0;
-    for i in 0..disk.len() {
-        let c = disk[i];
+    for i in 0..disk_chars.len() {
+        let c = disk_chars[i];
         if c == -1 {
-            break;
+            continue
         }
         checksum += (c as u64) * (i as u64);
     }
@@ -124,6 +126,6 @@ mod tests {
     #[test]
     fn test_part_two() {
         let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(result, Some(2858));
     }
 }
