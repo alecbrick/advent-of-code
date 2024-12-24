@@ -6,7 +6,7 @@ pub fn input_to_disk(input: &str) -> Vec<i32> {
     for c in input.chars() {
         let c_digit = c.to_digit(10).unwrap() as usize;
         let id_val = if id % 2 == 1 { -1 } else { id / 2 };
-        for i in 0..c_digit {
+        for _ in 0..c_digit {
             ret.push(id_val);
         }
         id += 1;
@@ -95,7 +95,7 @@ pub fn part_two(input: &str) -> Option<u64> {
 
     let disk_chars: Vec<i32> = disk.into_iter().flat_map(|data| {
         let mut ret: Vec<i32> = Vec::new();
-        for i in 0..data.1 {
+        for _ in 0..data.1 {
             ret.push(data.0);
         }
         ret

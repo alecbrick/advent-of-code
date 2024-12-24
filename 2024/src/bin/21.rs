@@ -1,4 +1,4 @@
-use std::{cmp::min, collections::{HashMap, VecDeque}, hash::Hash, result};
+use std::collections::{HashMap, VecDeque};
 use lazy_static::lazy_static;
 
 advent_of_code::solution!(21);
@@ -166,7 +166,7 @@ pub fn part_one(input: &str) -> Option<u128> {
     Some(result)
 }
 
-pub fn part_two(input: &str) -> Option<u32> {
+pub fn part_two(_input: &str) -> Option<u32> {
     None
 }
 

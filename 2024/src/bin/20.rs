@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, VecDeque}, hash::Hash};
+use std::collections::{HashMap, VecDeque};
 
 use advent_of_code::pos_out_of_bounds;
 

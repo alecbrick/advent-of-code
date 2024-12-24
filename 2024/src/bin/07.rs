@@ -50,7 +50,7 @@ pub fn part_two(input: &str) -> Option<i64> {
                         new_result_set.push(x * op);
                     }
                     let conc = x.to_string() + &op.to_string();
-                    let conc_int = conc.parse().unwrap();;
+                    let conc_int = conc.parse().unwrap();
                     if conc_int <= result {
                         new_result_set.push(conc_int);
                     }

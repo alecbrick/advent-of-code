@@ -1,4 +1,4 @@
-use num::integer::{gcd, Integer};
+use num::integer::Integer;
 use regex::Regex;
 
 advent_of_code::solution!(13);
@@ -18,7 +18,7 @@ pub fn part_one(input: &str) -> Option<u32> {
         let (bx, by) = (config[2], config[3]);
         let (x_dest, y_dest) = (config[4], config[5]);
 
-        let (mut curr_x, mut curr_y) = (0, 0);
+        let (mut curr_x, mut curr_y);
         let mut solutions: Vec<(u32, u32)> = Vec::new();
         for a in 0..100 {
             curr_x = ax * a;

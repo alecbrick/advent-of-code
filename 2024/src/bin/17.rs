@@ -14,7 +14,7 @@ pub fn adv(registers: &Vec<u32>, operand: u32) -> u32 {
     num / denom
 }
 
-pub fn part_one(input: &str) -> Option<String> {
+pub fn part_one(_input: &str) -> Option<String> {
     let mut i = 0;
     let mut output: Vec<u32> = Vec::new();
     let mut registers: Vec<u32> = vec![47792830, 0, 0];
@@ -84,8 +84,7 @@ That means the last C equals the last B (up to the last 3 digits).
 So, for each number, we have 8 possible pairs for B and C.
 In fact, when we start, we only have 4 possible options for C (shift 0-3).
 */
-pub fn part_two(input: &str) -> Option<u128> {
-    let mut output: Vec<u32> = Vec::new();
+pub fn part_two(_input: &str) -> Option<u128> {
     let mut program: Vec<u32> = vec![2,4,1,5,7,5,1,6,4,3,5,5,0,3,3,0];
     let mut possible_as: Vec<u128> = vec![0];
     

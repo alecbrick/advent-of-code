@@ -1,4 +1,4 @@
-use std::{cmp::max_by, collections::{HashMap, HashSet}};
+use std::collections::{HashMap, HashSet};
 
 advent_of_code::solution!(22);
 

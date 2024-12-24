@@ -1,6 +1,6 @@
 use regex::Regex;
 use std::io;
-use advent_of_code::utils::{read_lines};
+use advent_of_code::utils::read_lines;
 
 fn part_1(lines: &Vec<String>) {
     let re = Regex::new(r"mul\((\d+)\,(\d+)\)").unwrap();
@@ -45,6 +45,7 @@ fn part_2(lines: &Vec<String>) {
 
 fn main() -> io::Result<()> {
     let lines = read_lines("data/inputs/03.txt")?;
+    part_1(&lines);
     part_2(&lines);
     Ok(())
 }

@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, hash::Hash, vec};
+use std::collections::{HashMap, HashSet};
 
 advent_of_code::solution!(23);
 

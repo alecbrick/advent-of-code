@@ -53,7 +53,6 @@ fn part_1(lines: &Vec<String>) {
 
 
 fn part_2(lines: &Vec<String>) {
-    let mut total = 0;
     let search_string = "MAS";
     let height: i32 = lines.len().try_into().unwrap();
     let width: i32 = lines[0].len().try_into().unwrap();
@@ -113,6 +112,7 @@ fn part_2(lines: &Vec<String>) {
 
 fn main() -> io::Result<()> {
     let lines = read_lines("data/inputs/04.txt")?;
+    part_1(&lines);
     part_2(&lines);
     Ok(())
 }

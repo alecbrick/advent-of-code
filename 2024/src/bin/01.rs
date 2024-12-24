@@ -1,4 +1,4 @@
-use std::fs::{self, File};
+use std::fs::File;
 use std::io::{self, BufRead, BufReader};
 
 fn read_lines(filename: &str) -> io::Result<Vec::<String>> {
@@ -60,6 +60,7 @@ fn main() -> io::Result<()> {
         }
     }
 
+    part_1(&list_1, &list_2);
     part_2(&list_1, &list_2);
     Ok(())
 }

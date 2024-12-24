@@ -50,12 +50,12 @@ pub fn print_board(board: &Vec<Vec<char>>, i: usize) {
         .append(true)
         .create(true)
         .open("14_output.txt").unwrap();
-    writeln!(file, "{}", i);
+    writeln!(file, "{}", i).unwrap();
     for row in board {
         let row_str: String = row.iter().collect();
-        writeln!(file, "{}", row_str);
+        writeln!(file, "{}", row_str).unwrap();
     }
-    writeln!(file, "");
+    writeln!(file, "").unwrap();
 }
 
 pub fn part_two(input: &str) -> Option<u32> {

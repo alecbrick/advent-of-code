@@ -94,6 +94,7 @@ fn part_2(lines: &Vec<Vec<i32>>) {
 fn main() -> io::Result<()> {
     let lines = read_lines("data/inputs/02.txt")?;
     let parsed_lines = parse_ints(&lines);
+    part_1(&parsed_lines);
     part_2(&parsed_lines);
     Ok(())
 }

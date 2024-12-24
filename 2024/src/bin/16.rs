@@ -1,6 +1,6 @@
 advent_of_code::solution!(16);
 
-use std::{collections::{HashMap, HashSet}, hash::Hash};
+use std::collections::{HashMap, HashSet};
 
 use priority_queue::PriorityQueue;
 
@@ -25,10 +25,10 @@ pub fn turn_left(dir: (i32, i32)) -> (i32, i32) {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let mut grid: Vec<Vec<char>> = input.split("\n").map(|line| line.chars().collect()).collect();
+    let grid: Vec<Vec<char>> = input.split("\n").map(|line| line.chars().collect()).collect();
 
     let mut pos = (0, 0);
-    let mut dir = (0, 1);
+    let dir = (0, 1);
     let mut found = false;
     for i in 0..grid.len() {
         for j in 0..grid[0].len() {
@@ -80,10 +80,10 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let mut grid: Vec<Vec<char>> = input.split("\n").map(|line| line.chars().collect()).collect();
+    let grid: Vec<Vec<char>> = input.split("\n").map(|line| line.chars().collect()).collect();
 
     let mut pos = (0, 0);
-    let mut dir = (0, 1);
+    let dir = (0, 1);
     let mut found = false;
     for i in 0..grid.len() {
         for j in 0..grid[0].len() {
