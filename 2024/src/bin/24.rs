@@ -1,7 +1,5 @@
 use std::collections::{HashMap, HashSet};
 
-use regex::Regex;
-
 advent_of_code::solution!(24);
 
 pub fn compute(output: &str, states: &mut HashMap<String, bool>, logic: &HashMap<&str, (&str, &str, &str)>) -> bool {
@@ -23,11 +21,6 @@ pub fn compute(output: &str, states: &mut HashMap<String, bool>, logic: &HashMap
     result
 }
 
-pub fn compute_all(states: &mut HashMap<String, bool>, logic: &HashMap<&str, (&str, &str, &str)>) {
-
-}
-
-
 pub fn part_one(input: &str) -> Option<u128> {
     let (states_str, logic_str) = input.trim().split_once("\n\n").unwrap();
     let mut states: HashMap<String, bool> = states_str.split("\n").fold(HashMap::new(), |mut acc, state| {
@@ -37,7 +30,6 @@ pub fn part_one(input: &str) -> Option<u128> {
         acc
     });
 
-    let re = Regex::new(r"\S+ \S+ \S+ -> \S+");
     let logic: HashMap<&str, (&str, &str, &str)> = logic_str.split("\n").fold(HashMap::new(), |mut acc, logic| {
         let logic_vec: Vec<&str> = logic.split(" ").collect();
         let v1 = logic_vec[0];
@@ -79,15 +71,8 @@ pub fn print_logic(output: &str, logic: &HashMap<&str, (&str, &str, &str)>, visi
 
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let (states_str, logic_str) = input.trim().split_once("\n\n").unwrap();
-    let mut states: HashMap<String, bool> = states_str.split("\n").fold(HashMap::new(), |mut acc, state| {
-        let (str, value) = state.split_once(": ").unwrap();
-        let bool_val = if value == "0" { false } else { true };
-        acc.insert(str.to_string(), bool_val);
-        acc
-    });
+    let (_, logic_str) = input.trim().split_once("\n\n").unwrap();
 
-    let re = Regex::new(r"\S+ \S+ \S+ -> \S+");
     let logic: HashMap<&str, (&str, &str, &str)> = logic_str.split("\n").fold(HashMap::new(), |mut acc, logic| {
         let logic_vec: Vec<&str> = logic.split(" ").collect();
         let v1 = logic_vec[0];
