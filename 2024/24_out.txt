@@ -1,5 +1,6 @@
 {"sgr": ("y01", "XOR", "x01"), "z37": ("kbk", "XOR", "hbw"), "nnn": ("y42", "AND", "x42"), "nmq": ("qwg", "AND", "nrr"), "sfc": ("y15", "XOR", "x15"), "pwf": ("y26", "AND", "x26"), "jds": ("mqh", "OR", "vkh"), "vvv": ("y23", "XOR", "x23"), "jgr": ("x35", "AND", "y35"), "kwv": ("gvw", "AND", "kgn"), "vbw": ("x25", "XOR", "y25"), "z04": ("gbh", "XOR", "whq"), "btj": ("x31", "XOR", "y31"), "msf": ("wts", "OR", "cps"), "z27": ("nct", "XOR", "njn"), "kgn": ("y08", "XOR", "x08"), "qgs": ("x35", "XOR", "y35"), "tpf": ("pcf", "OR", "mqt"), "z05": ("kbv", "XOR", "csv"), "cqc": ("srn", "AND", "fhb"), "jgs": ("gbh", "AND", "whq"), "csr": ("x27", "AND", "y27"), "hkf": ("y24", "XOR", "x24"), "bhv": ("sfh", "OR", "qgg"), "ctv": ("y08", "AND", "x08"), "z18": ("kbw", "XOR", "jnv"), "pgn": ("kbk", "AND", "hbw"), "z06": ("srn", "XOR", "fhb"), "cqb": ("y19", "AND", "x19"), "z07": ("ksv", "XOR", "cnk"), "stp": ("hth", "AND", "kbg"), "drw": ("qvn", "AND", "sgr"), "sgh": ("x34", "AND", "y34"), "vvr": ("gvw", "XOR", "kgn"), "bpq": ("fcn", "AND", "bbk"), "z12": ("kqp", "XOR", "hcc"), "brn": ("qdf", "OR", "qbj"), "vpd": ("tmh", "AND", "qch"), "jkv": ("x33", "XOR", "y33"), "pgm": ("qvf", "AND", "jmm"), "wgj": ("y14", "AND", "x14"), "wmt": ("sng", "AND", "jtc"), "dtb": ("y44", "AND", "x44"), "jmn": ("y30", "AND", "x30"), "mjn": ("sgh", "OR", "hfn"), "rks": ("x23", "AND", "y23"), "dpg": ("x33", "AND", "y33"), "whq": ("fcv", "OR", "wmt"), "z16": ("pvv", "XOR", "rnq"), "qbj": ("y32", "AND", "x32"), "wnf": ("y26", "XOR", "x26"), "hth": ("x17", "XOR", "y17"), "qch": ("pbj", "OR", "dfg"), "srn": ("y06", "XOR", "x06"), "rqn": ("x13", "AND", "y13"), "nct": ("ggh", "OR", "pwf"), "bbk": ("x36", "XOR", "y36"), "mcc": ("pvv", "AND", "rnq"), "z08": ("kwv", "OR", "ctv"), "jpb": ("dpg", "OR", "mqp"), "tkt": ("x32", "XOR", "y32"), "vst": ("gws", "OR", "tfb"), "vkh": ("x39", "AND", "y39"), "gps": ("x13", "XOR", "y13"), "mqp": ("jkv", "AND", "brn"), "qgg": ("vbw", "AND", "wwt"), "z43": ("ncj", "XOR", "gdc"), "jkc": ("hcc", "AND", "kqp"), "fdd": ("fpw", "AND", "jjj"), "kqp": ("x12", "XOR", "y12"), "jmm": ("wdg", "OR", "vnr"), "z36": ("bbk", "XOR", "fcn"), "scp": ("x04", "AND", "y04"), "cps": ("x31", "AND", "y31"), "hfn": ("kpm", "AND", "jpb"), "csv": ("scp", "OR", "jgs"), "qpg": ("nct", "AND", "njn"), "pvv": ("gms", "OR", "ngf"), "sgv": ("y02", "XOR", "x02"), "sdv": ("rpk", "OR", "wgj"), "z15": ("sfc", "XOR", "sdv"), "fhn": ("y22", "XOR", "x22"), "z24": ("kpb", "XOR", "hkf"), "tvp": ("hfv", "AND", "npr"), "wwt": ("fcq", "OR", "qhs"), "wnk": ("y39", "XOR", "x39"), "ggf": ("x09", "XOR", "y09"), "qwg": ("x30", "XOR", "y30"), "z13": ("gps", "XOR", "bkk"), "gbh": ("x04", "XOR", "y04"), "z32": ("msf", "XOR", "tkt"), "hcc": ("sck", "OR", "kms"), "gqd": ("y40", "XOR", "x40"), "z10": ("nsm", "XOR", "vkt"), "kpb": ("rks", "OR", "rdh"), "qvf": ("y41", "XOR", "x41"), "bkr": ("y16", "XOR", "x16"), "wdg": ("gqd", "AND", "jds"), "z34": ("jpb", "XOR", "kpm"), "gvw": ("hjm", "OR", "tss"), "mqt": ("vkt", "AND", "nsm"), "nrr": ("vtj", "OR", "fpn"), "nsm": ("nbb", "OR", "rqg"), "rqg": ("vvr", "AND", "ggf"), "z25": ("wwt", "XOR", "vbw"), "z40": ("jds", "XOR", "gqd"), "pkb": ("x20", "XOR", "y20"), "z20": ("pkb", "XOR", "tbr"), "mms": ("x21", "AND", "y21"), "tss": ("cnk", "AND", "ksv"), "cnk": ("y07", "XOR", "x07"), "gfs": ("jvj", "OR", "rqn"), "ngf": ("sfc", "AND", "sdv"), "kbw": ("stp", "OR", "qwr"), "z09": ("vvr", "XOR", "ggf"), "z45": ("vpd", "OR", "dtb"), "z17": ("kbg", "XOR", "hth"), "fcn": ("jgr", "OR", "ckr"), "fkp": ("x38", "AND", "y38"), "qsw": ("x37", "AND", "y37"), "z44": ("tmh", "XOR", "qch"), "ghg": ("btn", "AND", "sgv"), "pkq": ("x21", "XOR", "y21"), "rjb": ("nmq", "OR", "jmn"), "rdh": ("kmd", "AND", "vvv"), "pbj": ("ncj", "AND", "gdc"), "thk": ("fkp", "OR", "fdd"), "z01": ("qvn", "XOR", "sgr"), "fpw": ("pgn", "OR", "qsw"), "z35": ("qgs", "XOR", "mjn"), "vnr": ("x40", "AND", "y40"), "sfh": ("x25", "AND", "y25"), "kbg": ("mcc", "OR", "bkr"), "ptk": ("y28", "XOR", "x28"), "vvb": ("x12", "AND", "y12"), "wjm": ("x02", "AND", "y02"), "z33": ("brn", "XOR", "jkv"), "nbb": ("y09", "AND", "x09"), "qwr": ("x17", "AND", "y17"), "wdf": ("fhn", "AND", "fvq"), "gvj": ("pkb", "AND", "tbr"), "kvs": ("y20", "AND", "x20"), "z31": ("rjb", "XOR", "btj"), "gms": ("y15", "AND", "x15"), "kbv": ("y05", "XOR", "x05"), "ckr": ("qgs", "AND", "mjn"), "z42": ("nmw", "XOR", "jdf"), "djn": ("qpg", "OR", "csr"), "tbr": ("tvp", "OR", "cqb"), "gmm": ("y41", "AND", "x41"), "kbk": ("y37", "XOR", "x37"), "z30": ("nrr", "XOR", "qwg"), "wts": ("rjb", "AND", "btj"), "z28": ("y28", "AND", "x28"), "z29": ("gwp", "XOR", "vst"), "sdp": ("kbv", "AND", "csv"), "kbq": ("y01", "AND", "x01"), "sck": ("y11", "AND", "x11"), "z02": ("btn", "XOR", "sgv"), "qvn": ("x00", "AND", "y00"), "kpm": ("y34", "XOR", "x34"), "jsk": ("gvj", "OR", "kvs"), "z03": ("jtc", "XOR", "sng"), "pcf": ("x10", "AND", "y10"), "nmw": ("pgm", "OR", "gmm"), "fcv": ("y03", "AND", "x03"), "npr": ("mgt", "OR", "hrv"), "gdk": ("x05", "AND", "y05"), "hrv": ("jnv", "AND", "kbw"), "btn": ("drw", "OR", "kbq"), "fvq": ("mms", "OR", "gdh"), "z21": ("pkq", "XOR", "jsk"), "jjj": ("x38", "XOR", "y38"), "jdf": ("y42", "XOR", "x42"), "z39": ("thk", "AND", "wnk"), "gdh": ("jsk", "AND", "pkq"), "z11": ("tpf", "XOR", "sft"), "bkk": ("jkc", "OR", "vvb"), "rpk": ("vng", "AND", "gfs"), "hbw": ("bpq", "OR", "crp"), "cvn": ("jdf", "AND", "nmw"), "sng": ("y03", "XOR", "x03"), "njn": ("x27", "XOR", "y27"), "tmh": ("x44", "XOR", "y44"), "jtc": ("wjm", "OR", "ghg"), "sft": ("y11", "XOR", "x11"), "hfv": ("x19", "XOR", "y19"), "mqh": ("wnk", "XOR", "thk"), "vkt": ("y10", "XOR", "x10"), "ggh": ("bhv", "AND", "wnf"), "z14": ("vng", "XOR", "gfs"), "z38": ("jjj", "XOR", "fpw"), "ncj": ("x43", "XOR", "y43"), "gdc": ("nnn", "OR", "cvn"), "qdf": ("tkt", "AND", "msf"), "ksv": ("cqc", "OR", "rnr"), "z00": ("y00", "XOR", "x00"), "gws": ("ptk", "AND", "djn"), "dfg": ("x43", "AND", "y43"), "crp": ("y36", "AND", "x36"), "kms": ("tpf", "AND", "sft"), "mgt": ("y18", "AND", "x18"), "rnq": ("y16", "AND", "x16"), "fcq": ("kpb", "AND", "hkf"), "z23": ("vvv", "XOR", "kmd"), "jnv": ("y18", "XOR", "x18"), "z22": ("fhn", "XOR", "fvq"), "vtj": ("x29", "AND", "y29"), "kmd": ("mmc", "OR", "wdf"), "gwp": ("x29", "XOR", "y29"), "jvj": ("gps", "AND", "bkk"), "fhb": ("sdp", "OR", "gdk"), "z41": ("qvf", "XOR", "jmm"), "z19": ("npr", "XOR", "hfv"), "qhs": ("x24", "AND", "y24"), "fpn": ("gwp", "AND", "vst"), "tfb": ("djn", "XOR", "ptk"), "vng": ("x14", "XOR", "y14"), "z26": ("bhv", "XOR", "wnf"), "hjm": ("y07", "AND", "x07"), "rnr": ("x06", "AND", "y06"), "mmc": ("y22", "AND", "x22")}
-Part 1: [1m58639252480880[0mPart 1: [1m58639252480880[0m (2.7ms)
+Part 1: [1m58639252480880[0m
+Part 1: [1m58639252480880[0m (2.7ms)
 z00: ("y00", "XOR", "x00")
 
 z01: ("qvn", "XOR", "sgr")
@@ -42,16 +43,16 @@ cqc: ("srn", "AND", "fhb")
 rnr: ("x06", "AND", "y06")
 cnk: ("y07", "XOR", "x07")
 
-z08: ("kwv", "OR", "ctv")
-kwv: ("gvw", "AND", "kgn")
+z08: ("kwv", "OR", "ctv")      <====
+kgn: ("y08", "XOR", "x08")
 gvw: ("hjm", "OR", "tss")
 hjm: ("y07", "AND", "x07")
 tss: ("cnk", "AND", "ksv")
-kgn: ("y08", "XOR", "x08")
-ctv: ("y08", "AND", "x08")
 
 z09: ("vvr", "XOR", "ggf")
-vvr: ("gvw", "XOR", "kgn")
+vvr: ("gvw", "XOR", "kgn")    <=====
+kwv: ("gvw", "AND", "kgn")
+ctv: ("y08", "AND", "x08")
 ggf: ("x09", "XOR", "y09")
 
 z10: ("nsm", "XOR", "vkt")
@@ -94,12 +95,12 @@ z16: ("pvv", "XOR", "rnq")
 pvv: ("gms", "OR", "ngf")
 gms: ("y15", "AND", "x15")
 ngf: ("sfc", "AND", "sdv")
-rnq: ("y16", "AND", "x16")
+rnq: ("y16", "AND", "x16")    <===
 
 z17: ("kbg", "XOR", "hth")
 kbg: ("mcc", "OR", "bkr")
 mcc: ("pvv", "AND", "rnq")
-bkr: ("y16", "XOR", "x16")
+bkr: ("y16", "XOR", "x16")    <====
 hth: ("x17", "XOR", "y17")
 
 z18: ("kbw", "XOR", "jnv")
@@ -162,7 +163,7 @@ ggh: ("bhv", "AND", "wnf")
 pwf: ("y26", "AND", "x26")
 njn: ("x27", "XOR", "y27")
 
-z28: ("y28", "AND", "x28")
+z28: ("y28", "AND", "x28") <<==
 
 z29: ("gwp", "XOR", "vst")
 gwp: ("x29", "XOR", "y29")
@@ -172,7 +173,7 @@ ptk: ("y28", "XOR", "x28")
 djn: ("qpg", "OR", "csr")
 qpg: ("nct", "AND", "njn")
 csr: ("x27", "AND", "y27")
-tfb: ("djn", "XOR", "ptk")
+tfb: ("djn", "XOR", "ptk") <<===
 
 z30: ("nrr", "XOR", "qwg")
 nrr: ("vtj", "OR", "fpn")
@@ -228,7 +229,7 @@ fpw: ("pgn", "OR", "qsw")
 pgn: ("kbk", "AND", "hbw")
 qsw: ("x37", "AND", "y37")
 
-z39: ("thk", "AND", "wnk")
+z39: ("thk", "AND", "wnk")    <====
 thk: ("fkp", "OR", "fdd")
 fkp: ("x38", "AND", "y38")
 fdd: ("fpw", "AND", "jjj")
@@ -236,7 +237,7 @@ wnk: ("y39", "XOR", "x39")
 
 z40: ("jds", "XOR", "gqd")
 jds: ("mqh", "OR", "vkh")
-mqh: ("wnk", "XOR", "thk")
+mqh: ("wnk", "XOR", "thk")   <======
 vkh: ("x39", "AND", "y39")
 gqd: ("y40", "XOR", "x40")
 
@@ -268,4 +269,5 @@ z45: ("vpd", "OR", "dtb")
 vpd: ("tmh", "AND", "qch")
 dtb: ("y44", "AND", "x44")
 
-Part 2: ✖Part 2: ✖             
+Part 2: ✖
+Part 2: ✖             
